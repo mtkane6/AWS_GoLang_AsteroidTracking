@@ -5,5 +5,5 @@ import (
 )
 
 func main() {
-	a.MakeCall()
+	a.SeeAllAsteroids()
 }

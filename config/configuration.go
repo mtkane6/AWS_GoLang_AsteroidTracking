@@ -4,9 +4,9 @@ import (
 	"io/ioutil"
 )
 
-// GetBaseURL returns the beginning of the API call to DarkSky
-func GetBaseURL() string {
-	BaseURL := "https://api.nasa.gov/neo/rest/v1/feed?"
+// GetAllAsteroidURL returns the URL for the All Asteroids call
+func GetAllAsteroidURL(todaysDate string) string {
+	BaseURL := "https://api.nasa.gov/neo/rest/v1/feed?start_date=" + todaysDate + "&end_date=" + todaysDate + "&api_key=" + GetAPIkey()
 	return BaseURL
 }
 
