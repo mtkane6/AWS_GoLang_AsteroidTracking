@@ -18,7 +18,7 @@ func SeeAllAsteroids() {
 	CallNasa(date, &rawAsteroids)
 
 	// fills asteroidCollection[]
-	asteroidCollection = FillAsteroids(rawAsteroids, asteroidCollection, date)
+	asteroidCollection = d.FillAsteroids(rawAsteroids, asteroidCollection, date)
 
 	for i, v := range asteroidCollection {
 		fmt.Printf("Collection %d: %+v\n", i, v)
