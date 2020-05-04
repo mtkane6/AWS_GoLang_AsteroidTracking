@@ -1,9 +1,9 @@
 package main
 
 import (
-	a "./api"
+	d "Asteroids/domain"
 )
 
 func main() {
-	a.SeeAllAsteroids()
+	d.SeeAllAsteroids()
 }

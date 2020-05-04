@@ -71,3 +71,7 @@ type Asteroid struct {
 	RelativeVelocityKilometersPerHour string
 	MissDistanceKilometers            string
 }
+
+func FillAsteroids() {
+
+}
