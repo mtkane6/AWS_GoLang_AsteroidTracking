@@ -15,14 +15,14 @@ func SeeAllAsteroids() {
 	date := time.Now().Format("2006-01-02")
 
 	// fills asteroid info into rawAsteroids map
-	CallNasa(date, &rawAsteroids)
+	CallNasaAllNeos(date, &rawAsteroids)
 
-	// fills asteroidCollection[]
+	// fills asteroidCollection[] and orbital data
 	asteroidCollection = d.FillAsteroids(rawAsteroids, asteroidCollection, date)
+	d.FillOrbitalData(asteroidCollection)
 
 	for i, v := range asteroidCollection {
-		fmt.Printf("Collection %d: %+v\n", i, v)
-
+		fmt.Printf("Collection %d: %+v\n", i, v.Orbital)
 	}
 
 }
