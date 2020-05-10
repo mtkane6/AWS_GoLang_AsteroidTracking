@@ -1,9 +1,9 @@
 package domain
 
 import (
-	"fmt"
 	"time"
 
+	a "Asteroids/aws"
 	d "Asteroids/datastructs"
 )
 
@@ -21,8 +21,11 @@ func SeeAllAsteroids() {
 	asteroidCollection = d.FillAsteroids(rawAsteroids, asteroidCollection, date)
 	d.FillOrbitalData(asteroidCollection)
 
-	for i, v := range asteroidCollection {
-		fmt.Printf("Collection %d: %+v\n", i, v.Orbital)
-	}
+	// for i, v := range asteroidCollection {
+	// 	fmt.Printf("Collection %d: %+v\n", i, v.Orbital)
+
+	dyna := a.DynamoInit()
+	// fmt.Printf("%+v", &dyna)
+	a.InputItem(asteroidCollection, dyna)
 
 }
